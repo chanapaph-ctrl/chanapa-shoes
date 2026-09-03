@@ -1,296 +1,98 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="product-grid">
 
-    <title>CHANAPA SHOES | ร้านรองเท้าแฟชั่น</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- ===== HEADER ===== -->
-<header>
-
-    <div class="logo">
-        CHANAPA <span>SHOES</span>
-    </div>
-
-    <nav>
-        <a href="#home">หน้าแรก</a>
-        <a href="#products">สินค้า</a>
-        <a href="#about">เกี่ยวกับเรา</a>
-        <a href="#contact">ติดต่อเรา</a>
-    </nav>
-
-    <div class="cart">
-        🛒 ตะกร้า
-        <span id="cart-count">0</span>
-    </div>
-
-</header>
-
-
-<!-- ===== HOME ===== -->
-<section class="hero" id="home">
-
-    <div class="hero-text">
-
-        <p class="small-title">
-            NEW COLLECTION 2026
-        </p>
-
-        <h1>
-            รองเท้าแฟชั่น<br>
-            สำหรับทุกสไตล์
-        </h1>
-
-        <p>
-            เลือกรองเท้าที่เหมาะกับคุณ
-            ดีไซน์สวย ใส่สบาย และมีสไตล์
-        </p>
-
-        <a href="#products" class="shop-btn">
-            เลือกซื้อสินค้า
-        </a>
-
-    </div>
-
-    <div class="hero-image">
-        <img src="images/hero-shoe.jpg"
-             alt="รองเท้า Chanapa Shoes">
-    </div>
-
-</section>
-
-
-<!-- ===== PRODUCTS ===== -->
-<section class="products" id="products">
-
-    <h2>สินค้าของเรา</h2>
-
-    <p class="subtitle">
-        เลือกรองเท้าที่เหมาะกับสไตล์ของคุณ
-    </p>
-
-
-    <!-- ปุ่มเลือกประเภทสินค้า -->
-    <div class="category-buttons">
-
-        <button class="category active"
-                onclick="filterProducts('all')">
-            ทั้งหมด
-        </button>
-
-        <button class="category"
-                onclick="filterProducts('sneaker')">
-            👟 รองเท้าผ้าใบ
-        </button>
-
-        <button class="category"
-                onclick="filterProducts('men')">
-            👞 รองเท้าผู้ชาย
-        </button>
-
-        <button class="category"
-                onclick="filterProducts('women')">
-            👠 รองเท้าผู้หญิง
-        </button>
-
-    </div>
-
-
-    <!-- ===== PRODUCT LIST ===== -->
-    <div class="product-grid">
-
-
-        <!-- สินค้า 1 -->
-        <div class="product-card sneaker">
-
-            <div class="product-img">
-                <img src="images/shoe1.jpg"
-                     alt="Classic White">
-            </div>
-
-            <h3>Classic White</h3>
-
-            <p>
-                รองเท้าผ้าใบสีขาว
-            </p>
-
-            <div class="price">
-                ฿1,290
-            </div>
-
-            <div class="product-buttons">
-
-                <button class="detail-btn"
-                        onclick="showDetail('Classic White')">
-                    ดูรายละเอียด
-                </button>
-
-                <button class="cart-btn"
-                        onclick="addCart()">
-                    เพิ่มลงตะกร้า
-                </button>
-
-            </div>
-
+    <!-- รองเท้า 1 -->
+    <div class="product-card sneaker">
+        <div class="product-img">
+            <img src="images/shoe1.jpg" alt="Classic White">
         </div>
 
+        <h3>Classic White</h3>
+        <p>รองเท้าผ้าใบสีขาว</p>
+        <div class="price">฿1,290</div>
 
-        <!-- สินค้า 2 -->
-        <div class="product-card men">
+        <div class="product-buttons">
+            <button class="detail-btn"
+                    onclick="showDetail('Classic White')">
+                ดูรายละเอียด
+            </button>
 
-            <div class="product-img">
-                <img src="images/shoe2.jpg"
-                     alt="Urban Black">
-            </div>
-
-            <h3>Urban Black</h3>
-
-            <p>
-                รองเท้าผู้ชายสีดำ
-            </p>
-
-            <div class="price">
-                ฿1,590
-            </div>
-
-            <div class="product-buttons">
-
-                <button class="detail-btn"
-                        onclick="showDetail('Urban Black')">
-                    ดูรายละเอียด
-                </button>
-
-                <button class="cart-btn"
-                        onclick="addCart()">
-                    เพิ่มลงตะกร้า
-                </button>
-
-            </div>
-
+            <button class="cart-btn"
+                    onclick="addCart()">
+                เพิ่มลงตะกร้า
+            </button>
         </div>
-
-
-        <!-- สินค้า 3 -->
-        <div class="product-card sneaker">
-
-            <div class="product-img">
-                <img src="images/shoe3.jpg"
-                     alt="Street Runner">
-            </div>
-
-            <h3>Street Runner</h3>
-
-            <p>
-                รองเท้าผ้าใบแฟชั่น
-            </p>
-
-            <div class="price">
-                ฿1,490
-            </div>
-
-            <div class="product-buttons">
-
-                <button class="detail-btn"
-                        onclick="showDetail('Street Runner')">
-                    ดูรายละเอียด
-                </button>
-
-                <button class="cart-btn"
-                        onclick="addCart()">
-                    เพิ่มลงตะกร้า
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- สินค้า 4 -->
-        <div class="product-card women">
-
-            <div class="product-img">
-                <img src="images/shoe4.jpg"
-                     alt="Elegant Pink">
-            </div>
-
-            <h3>Elegant Pink</h3>
-
-            <p>
-                รองเท้าผู้หญิงแฟชั่น
-            </p>
-
-            <div class="price">
-                ฿1,390
-            </div>
-
-            <div class="product-buttons">
-
-                <button class="detail-btn"
-                        onclick="showDetail('Elegant Pink')">
-                    ดูรายละเอียด
-                </button>
-
-                <button class="cart-btn"
-                        onclick="addCart()">
-                    เพิ่มลงตะกร้า
-                </button>
-
-            </div>
-
-        </div>
-
     </div>
 
-</section>
+
+    <!-- รองเท้า 2 -->
+    <div class="product-card men">
+        <div class="product-img">
+            <img src="images/shoe2.jpg" alt="Urban Black">
+        </div>
+
+        <h3>Urban Black</h3>
+        <p>รองเท้าผู้ชายสีดำ</p>
+        <div class="price">฿1,590</div>
+
+        <div class="product-buttons">
+            <button class="detail-btn"
+                    onclick="showDetail('Urban Black')">
+                ดูรายละเอียด
+            </button>
+
+            <button class="cart-btn"
+                    onclick="addCart()">
+                เพิ่มลงตะกร้า
+            </button>
+        </div>
+    </div>
 
 
-<!-- ===== ABOUT ===== -->
-<section class="about" id="about">
+    <!-- รองเท้า 3 -->
+    <div class="product-card sneaker">
+        <div class="product-img">
+            <img src="images/shoe3.jpg" alt="Street Runner">
+        </div>
 
-    <h2>เกี่ยวกับ CHANAPA SHOES</h2>
+        <h3>Street Runner</h3>
+        <p>รองเท้าผ้าใบแฟชั่น</p>
+        <div class="price">฿1,490</div>
 
-    <p>
-        CHANAPA SHOES
-        ร้านรองเท้าแฟชั่นออนไลน์
-        คัดสรรรองเท้าคุณภาพดี
-        ดีไซน์ทันสมัย ราคาเข้าถึงง่าย
-        พร้อมบริการสำหรับลูกค้าทุกคน
-    </p>
+        <div class="product-buttons">
+            <button class="detail-btn"
+                    onclick="showDetail('Street Runner')">
+                ดูรายละเอียด
+            </button>
 
-</section>
-
-
-<!-- ===== CONTACT ===== -->
-<section class="contact" id="contact">
-
-    <h2>ติดต่อเรา</h2>
-
-    <p>📞 โทร: 063-078-0854</p>
-
-    <p>📧 Email: chanapashoes@gmail.com</p>
-
-    <p>📍 ภาคใต้ ประเทศไทย</p>
-
-</section>
+            <button class="cart-btn"
+                    onclick="addCart()">
+                เพิ่มลงตะกร้า
+            </button>
+        </div>
+    </div>
 
 
-<!-- ===== FOOTER ===== -->
-<footer>
+    <!-- รองเท้า 4 -->
+    <div class="product-card women">
+        <div class="product-img">
+            <img src="images/shoe4.jpg" alt="Elegant Pink">
+        </div>
 
-    <p>
-        © 2026 CHANAPA SHOES
-    </p>
+        <h3>Elegant Pink</h3>
+        <p>รองเท้าผู้หญิงแฟชั่น</p>
+        <div class="price">฿1,390</div>
 
-</footer>
+        <div class="product-buttons">
+            <button class="detail-btn"
+                    onclick="showDetail('Elegant Pink')">
+                ดูรายละเอียด
+            </button>
 
+            <button class="cart-btn"
+                    onclick="addCart()">
+                เพิ่มลงตะกร้า
+            </button>
+        </div>
+    </div>
 
-<script src="script.js"></script>
-
-</body>
-</html>
+</div>
